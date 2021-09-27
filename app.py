@@ -47,7 +47,7 @@ def login():
                 session['user_id'] = user_id
                 ret_data = dict(code=0, ret_msg="login success")
             else:
-                ret_data = dict(code=1, ret_msg='user name or password is wrong')
+                ret_data = dict(code=1, ret_msg='username or password is wrong')
         else:
             ret_data = dict(code=1, ret_msg='please input user_name or password')
     else:
