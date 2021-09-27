@@ -25,7 +25,7 @@ def create():
         account_permission = request.args.get('account_permission')
         if (type(account_permission) == str): #Check if the input paramater is a string
             account_permission = int(account_permission, 16)
-        if account_permission != 10 or account_permission != 8 or account_permission != 2:
+        if account_permission == 10 or account_permission == 8 or account_permission == 2 or account_permission == 0:
             ret_data = dict(code=1, ret_msg='Account_Permission must be 0xa, 0x8, or 0x2')
             return jsonify(ret_data)
         new_user = User(username, password, role_id, account_permission)
@@ -124,7 +124,7 @@ def update():
             account_permission = request.args.get('account_permission')
             if (type(account_permission) == str): #Check if the input paramater is a string
                 account_permission = int(account_permission, 16)
-            if account_permission != 10 or account_permission != 8 or account_permission != 2:
+            if account_permission == 10 or account_permission == 8 or account_permission == 2 or account_permission == 0:
                 ret_data = dict(code=1, ret_msg='Account_Permission must be 0xa, 0x8, or 0x2')
                 return jsonify(ret_data)
             user.account_permission = account_permission

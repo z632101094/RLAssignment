@@ -46,7 +46,8 @@ The following parts are the route and description of all the RestAPI of this app
         Admin role needed.
         
         It will basicly create a new User. The username is unique, the role_id must exist in Role table.
-        You have 3 legal choice for the account_permission. 
+        You have 4 legal choice for the account_permission. 
+        If the input == 0x0 == 0, nothing happen.
         If the input == 0x2 == 2, this account can access COMPANY_LISTS
         If the input == 0x8 == 8, this account can access COMPANY_INFO (Admin can not access COMPANY_INFO)
         If the input == 0xa == 10, this account can access both COMPANY_LISTS and COMPANY_INFO (Admin can not access COMPANY_INFO)
