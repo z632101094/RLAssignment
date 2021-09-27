@@ -139,4 +139,34 @@ The following parts are the route and description of all the RestAPI of this app
             if success: code=0, ret_msg<str>, value = company_info.json
             if fail: code = 1, ret_msg<str>
             
+    /user_company/create:
+        Input: users_id<int>, company_id<int>
+        Admin role needed.
         
+        It will create a user_company association. users_id and company_id must be existed.
+        If you delete a user/company in users/company table, this association will automatically
+        be deleted.
+        
+        The return value is a json with 2 fields:
+            if success: code=0, ret_msg<str>
+            if fail: code = 1, ret_msg<str>
+        
+    /user_company/delete:
+        Input: users_id<int>, company_id<int>
+        Admin role needed.
+        
+        It will delete a user_company association by input id.
+        
+        The return value is a json with 2 fields:
+            if success: code=0, ret_msg<str>
+            if fail: code = 1, ret_msg<str>
+    
+    /user_company/read:
+        Input: none
+        Admin role needed.
+        
+        It will return all user_company associations.
+        
+        The return value is a json with 2-3 fields:
+            if success: code=0, ret_msg<str>, value = user_company.json
+            if fail: code = 1, ret_msg<str>
