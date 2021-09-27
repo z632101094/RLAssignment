@@ -24,7 +24,7 @@ It will also create a two Role:
 {'id':1, 'name':'admin', 'role_permission': 0x7}
 {'id':2, 'name':'user', 'role_permission': 0x1}
 
-The default url of this application is 'http://127.0.0.1:5000/'
+The default url of this application is http://127.0.0.1:5000/
 
 
 The following parts are the route and description of all the RestAPI of this application:
