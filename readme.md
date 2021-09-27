@@ -37,7 +37,7 @@ The default url of this application is http://127.0.0.1:5000/
 The following parts are the route and description of all the RestAPI of this application:
 
 
-    /login:
+    POST: /login
         Input: username<string>, password<string>    
         Admin role needed.
         
@@ -50,7 +50,7 @@ The following parts are the route and description of all the RestAPI of this app
 
         
         
-    /user/create:
+    POST: /user/create
         Input: username<string>, password<string>, role_id<int>, account_permission<int>
         Admin role needed.
         
@@ -65,7 +65,7 @@ The following parts are the route and description of all the RestAPI of this app
             if success: code=0, ret_msg<str>
             if fail: code=1, ret_msg<str>
         
-    /user/select:
+    GET: /user/select
         Input: none
         Admin role needed.
         
@@ -75,7 +75,7 @@ The following parts are the route and description of all the RestAPI of this app
             if success: code=0, ret_msg<str>, value = users.json
             if fail: code = 1, ret_msg<str>
         
-    /user/select_by_username:
+    GET: /user/select_by_username
         Input: username<str>
         Admin role needed.
         
@@ -85,7 +85,7 @@ The following parts are the route and description of all the RestAPI of this app
             if success: code=0, ret_msg<str>, value = user.json
             if fail: code = 1, ret_msg<str>
         
-    /user/update: 
+    PUT: /user/update: 
         Input: username<str>
         Option Input: password<string>, role_id<int>, account_permission<int>
         Admin role needed.
@@ -96,7 +96,7 @@ The following parts are the route and description of all the RestAPI of this app
             if success: code=0, ret_msg<str>
             if fail: code = 1, ret_msg<str>
         
-    /user/delete:
+    POST: /user/delete:
         Input: username<str>
         Admin role needed.
         
@@ -106,7 +106,7 @@ The following parts are the route and description of all the RestAPI of this app
             if success: code=0, ret_msg<str>
             if fail: code = 1, ret_msg<str>
             
-    /company/create:
+    POST: /company/create:
         Input: id<int>
         Admin role needed.
         
@@ -116,7 +116,7 @@ The following parts are the route and description of all the RestAPI of this app
             if success: code=0, ret_msg<str>
             if fail: code = 1, ret_msg<str>
     
-    /company/delete:
+    POST: /company/delete:
         Input: id<int>
         Admin role needed.
         
@@ -126,7 +126,7 @@ The following parts are the route and description of all the RestAPI of this app
             if success: code=0, ret_msg<str>
             if fail: code = 1, ret_msg<str>
             
-    /company/read:
+    GET: /company/read:
         Input: none
         COMPANY_LISTS permission needed. 
         
@@ -136,7 +136,7 @@ The following parts are the route and description of all the RestAPI of this app
             if success: code=0, ret_msg<str>, value = companies.json
             if fail: code = 1, ret_msg<str>
     
-    /company/read_company_info:
+    GET: /company/read_company_info:
         Input: id<int>
         COMPANY_INFO permission needed. User can't have an Admin role. 
         
@@ -146,7 +146,7 @@ The following parts are the route and description of all the RestAPI of this app
             if success: code=0, ret_msg<str>, value = company_info.json
             if fail: code = 1, ret_msg<str>
             
-    /user_company/create:
+    POST: /user_company/create:
         Input: users_id<int>, company_id<int>
         Admin role needed.
         
@@ -158,7 +158,7 @@ The following parts are the route and description of all the RestAPI of this app
             if success: code=0, ret_msg<str>
             if fail: code = 1, ret_msg<str>
         
-    /user_company/delete:
+    POST: /user_company/delete:
         Input: users_id<int>, company_id<int>
         Admin role needed.
         
@@ -168,7 +168,7 @@ The following parts are the route and description of all the RestAPI of this app
             if success: code=0, ret_msg<str>
             if fail: code = 1, ret_msg<str>
     
-    /user_company/read:
+    GET: /user_company/read:
         Input: none
         Admin role needed.
         
