@@ -1,7 +1,10 @@
+<h1>Introduction</h1>
 It is an simple backend assignment based on Python + Flask.
 It has a User model and a Company model. Some CRUD RestAPIs and authorization are implemented. 
 
 
+
+<h1>How to Run</h1>
 To execute this program, you should have Python3, Flask, Sqlite3 on your environment. 
 You may find some python packages are missing on your environment, just use 'pip install packagename' to
 install all needed packages.
@@ -19,14 +22,18 @@ Go to the root of this project, then following the instruction below to run the 
     venv\Scripts\python.exe -m flask run
 
 It will create a default User with username = 'admin' and password = 'admin'.
-The User object is: {'id':1, 'username':'admin', 'password': '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 'role_id': 1, 'account_permission': 0}
+The User object is: 
+<p>{'id':1, 'username':'admin', 'password': '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 'role_id': 1, 'account_permission': 0}</p>
+
 It will also create a two Role: 
-{'id':1, 'name':'admin', 'role_permission': 0x7}
-{'id':2, 'name':'user', 'role_permission': 0x1}
+
+<p>{'id':1, 'name':'admin', 'role_permission': 0x7}</p>
+<p>{'id':2, 'name':'user', 'role_permission': 0x1}</p>
 
 The default url of this application is http://127.0.0.1:5000/
 
 
+<h1>API document</h1>
 The following parts are the route and description of all the RestAPI of this application:
 
 
