@@ -39,7 +39,6 @@ The following parts are the route and description of all the RestAPI of this app
 
     POST: /login
         Input: username<string>, password<string>    
-        Admin role needed.
         
         This application uses Session for user authorization. If you login successfully, 
         the users.id will be stored in the session. 
