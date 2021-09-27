@@ -6,7 +6,7 @@ To execute this program, you should have Python3, Flask, Sqlite3 on your environ
 You may find some python packages are missing on your environment, just use 'pip install packagename' to
 install all needed packages.
 
-Go to the root of this project, then follow the instruction below to run the application:
+Go to the root of this project, then following the instruction below to run the application:
 
     flask db init
     
