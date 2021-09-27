@@ -28,6 +28,8 @@ The default url of this application is http://127.0.0.1:5000/
 
 
 The following parts are the route and description of all the RestAPI of this application:
+
+
     /login:
         Input: username<string>, password<string>    
         Admin role needed.
