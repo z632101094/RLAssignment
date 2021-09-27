@@ -18,7 +18,8 @@ Go to the root of this project, then following the instruction below to run the 
     
     venv\Scripts\python.exe -m flask run
 
-It will create a default User with username = 'admin' and password = 'admin'
+It will create a default User with username = 'admin' and password = 'admin'.
+The User object is: {'id':1, 'username':'admin', 'password': '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 'role_id': 1, 'account_permission': 0}
 It will also create a two Role: 
 {'id':1, 'name':'admin', 'role_permission': 0x7}
 {'id':2, 'name':'user', 'role_permission': 0x1}
